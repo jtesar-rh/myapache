@@ -4,7 +4,6 @@ RUN dnf install -y httpd /usr/bin/ps && \
     chmod -R g+rwX /run/httpd
 ADD /rootfs /
 EXPOSE 8080
-RUN touch /version4
 LABEL io.openshift.min-cpu 2
 
 CMD ["run-httpd"]
